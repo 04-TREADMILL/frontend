@@ -27,6 +27,7 @@ upload:
   stage: upload
   script:
     - echo $CLOUD_TENCENT_SSH > /tmp/cloud_tencent_ssh
+    - chmod 600 /tmp/cloud_tencent_ssh
     - scp -o StrictHostKeyChecking=no -i /tmp/cloud_tencent_ssh -r * ubuntu@150.158.197.57:/home/ubuntu/frontend
     - ssh -o StrictHostKeyChecking=no -i /tmp/cloud_tencent_ssh ubuntu@150.158.197.57 "cd frontend; chmod u+x build.sh && ./build.sh"
 
