@@ -25,5 +25,5 @@ before_script:
 upload:
   stage: upload
   script:
-    - scp -i $CLOUD_TENCENT_SSH -r * ubuntu@150.158.197.57:/home/ubuntu/frontend
-    - ssh -i $CLOUD_TENCENT_SSH ubuntu@150.158.197.57 "cd frontend; chmod u+x build.sh && ./build.sh"
+    - scp -i "$CLOUD_TENCENT_SSH" -r * ubuntu@150.158.197.57:/home/ubuntu/frontend
+    - ssh -i "$CLOUD_TENCENT_SSH" ubuntu@150.158.197.57 "cd frontend; chmod u+x build.sh && ./build.sh"
