@@ -12,4 +12,4 @@ RUN wget https://senti-strength.oss-cn-nanjing.aliyuncs.com/myEASIEST-1.0-SNAPSH
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$PATH:$JAVA_HOME/bin
 
-CMD ["streamlit", "run", "main.py", "--server.port","8501"]
+ENTRYPOINT ["streamlit", "run", "main.py", "--server.port"]
